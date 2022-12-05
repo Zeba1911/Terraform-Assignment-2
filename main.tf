@@ -2,7 +2,7 @@
 
 resource "aws_instance" "web" {
   for_each      = var.resource_ec2
-  ami           = "ami-074dc0a6f6c764218"
+  ami           = var.ami-id
   instance_type = "t2.micro"
 
   tags = {
