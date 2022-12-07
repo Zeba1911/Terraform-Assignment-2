@@ -17,9 +17,5 @@ resource "aws_instance" "web" {
 resource "aws_s3_bucket" "bucket" {
   count  = length(var.resource_s3)
   bucket = var.resource_s3[count.index]
-
-  tags = {
-    Owner   = "ZebaTomar"
-    Purpose = "Traning"
-  }
+  tags =var.Tags
 }
